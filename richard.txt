@@ -1,0 +1,120 @@
+Delivered-To: mr.encodedguy@gmail.com
+Received: by 2002:a4a:e789:0:0:0:0:0 with SMTP id x9csp205734oov;
+        Tue, 28 Jun 2022 23:26:20 -0700 (PDT)
+X-Received: by 2002:aa7:d7c4:0:b0:435:6a5b:b02f with SMTP id e4-20020aa7d7c4000000b004356a5bb02fmr2101367eds.365.1656483740990;
+        Tue, 28 Jun 2022 23:22:20 -0700 (PDT)
+X-Google-Smtp-Source: AGRyM1ujl68UpSxCofhLOXJRi3h7/O63LhJ3tezhKIxPyfyxCuapsstE4ZUvT/w7deDznepn2uWc
+X-Received: by 2002:aa7:d7c4:0:b0:435:6a5b:b02f with SMTP id e4-20020aa7d7c4000000b004356a5bb02fmr2101152eds.365.1656483737528;
+        Tue, 28 Jun 2022 23:22:17 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656483737; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=DYFWYiqSGbMGNGf4bHQMrRBSZxh8qFj21brEjhhPBzW2AUqunsBg9yjRENN/Js9l52
+         Z9hh+P0Mims89/P0gDRom2ewB08AZadmycin0AuB9mnYt/w8zfFnlIK/ipfF1gJbt445
+         oXm4E64JjtrRBXHWtVLfKQMMcCYPNZlS9d1vlrw+ZcCE8MtynsIcVwqEXBJCxyRtHOEa
+         6qxgxlyJXdH0X2YxGsFYIfi+Wckez0JdYPVQgSiDgFeO5DPC+sZ2rA3GDPilYiQ6WVcD
+         OUWrfXT/7OxPcvRJ0VsooQ0ehV08n6/lMjAnp776qwsPqDDQc9i3ondjBB7Y5nen/+Hz
+         lw9A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:suggested_attachment_session_id:content-language
+         :accept-language:message-id:date:thread-index:thread-topic:subject
+         :to:from:dkim-signature;
+        bh=lN245RXtdO/RDQ1S8vPxGuzjaeCFAzXOB/uuws67+gE=;
+        b=GFbfkhO2FUL4LnXD/fOE3GSczv73/WpsZJDBthrM0YN3Nf5Md4r3EH1ydEUdddqzkU
+         JOlTIYF/EkTSlpPrH2yMpbu1Mm7KOo0qeT2Ah6nNnQCR98AypfNI3gXzF6/79cHDOq+I
+         qLaYYuDW3JQOxZWADXzmH8yUoOJ11FIU17GrL2JiqCW5tppACKAXJ+iRug3l5jAkVP38
+         5HeekJkrWf42dQ2c7BquPK0yVHkaxsQq/YoG/XMtYKtF8DAaKjuQgkprRxZhHTXqvpTM
+         ZExUOu/cHRzvheVkZUaHlZYQwbKJIwOIMDK+nH/5R1GCF5U11aZ1wONMSJS4I26W8zLs
+         wySQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=MopknAkC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of justtrying2makeit@outlook.com designates 40.92.42.68 as permitted sender) smtp.mailfrom=justtrying2makeit@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <justtrying2makeit@outlook.com>
+Received: from NAM10-MW2-obe.outbound.protection.outlook.com (mail-mw2nam10olkn2068.outbound.protection.outlook.com. [40.92.42.68])
+        by mx.google.com with ESMTPS id w3-20020a05640234c300b004356a7de065si24125450edc.287.2022.06.28.23.22.15
+        for <mr.encodedguy@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 28 Jun 2022 23:22:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of justtrying2makeit@outlook.com designates 40.92.42.68 as permitted sender) client-ip=40.92.42.68;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=MopknAkC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of justtrying2makeit@outlook.com designates 40.92.42.68 as permitted sender) smtp.mailfrom=justtrying2makeit@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none; b=Qa1b9wH4Bj2H/pJIKbexqTcwHDahvhrjhb3BnW0yheSK+AS/QmUHW8wpoTZqnb7DkN5YRNWnk7TYMHktO1DM1VOApO4yx3LAXWmp5NCt9j1mT2T49Sy22yoaXcx7AsjuVcX//gwOwKyvptMEce9ijG4LcCmpWCLInOi5BpTbWdUK1PD+4ByK4uZh2F2XduJ0r7ekoNCSr3LB5IvZnng1KmtXkYtb4S/aJBDxfq6LB38lX1PFv0ONFIky6u/mT40TpX6daxGAu87z5zsLvnUyIqcLSmwL2+K+grZjg/NGbhyFzY/DpNTQfuPrj1TBqaJPnFCmC8HY3AtB0gBfztbdCQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector9901; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=lN245RXtdO/RDQ1S8vPxGuzjaeCFAzXOB/uuws67+gE=; b=casAAEX4UKl5H3KIgNbM3SlpiaikelbZCRuMQcxGquJrt17vsvHbDU+K+KgowN7mBfhCnR5iu/qdEtUnuCNORHqdPcX+OH+jq729zCoJ0vgvmgH9neI9eK+8I76OOCoHG/JXCz4FZhScYzpA29dSVHo4nor//lW060Q7qiSZ+kmvpOYxB6EebqoLwlr4QEjHzMq7017lYTo4g6eYpjQNkGPzJWb9MtER7aY33CoLR8hblPQUBDJqYD0G9B8BbODac0cwGujkdnmqC9y1OWzKB57KakkO2NNK9xlKCktwAV7xDXnHgNJdokHw+55vQJWl4V6ySRAoEEmtPI3xff5Jsg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none; dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=lN245RXtdO/RDQ1S8vPxGuzjaeCFAzXOB/uuws67+gE=; b=MopknAkCcnM2KI1bnpYqFe4TH9IMEUXXnqdd0tn1a/3iPyYLe7SsBP1p2RpSdMA2iPpsQ6+xXBB6UKCRnIr1wt12JKAoCJUsOw9ei82CQ69gmYL0YfcBJw8X4HFvfoesr1c5ztgbQ1lvyDBTHurZ2eQIHZdi368EjEJW8bJ9OO7XBkkHBHKL+aRoo3H4BALhib5M6mKF4toWWzX8L72jUll0YHtCtHt+6F9OgLVWYiCaCICqs1DZrqdPNtv0ybJfjji+OEAFcq8D8n72LVdVeHP+vqL5oNek1J+ROFhqdRJKsjgvmbp33HFheHl97wzuhwoF9e7D1bpZrviBzKPhRg==
+Received: from BLAPR07MB7508.namprd07.prod.outlook.com (2603:10b6:208:29a::13) by DM6PR07MB4748.namprd07.prod.outlook.com (2603:10b6:5:a1::21) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5373.17; Wed, 29 Jun 2022 06:22:12 +0000
+Received: from BLAPR07MB7508.namprd07.prod.outlook.com ([fe80::bda6:3953:1875:86]) by BLAPR07MB7508.namprd07.prod.outlook.com ([fe80::bda6:3953:1875:86%8]) with mapi id 15.20.5373.015; Wed, 29 Jun 2022 06:22:12 +0000
+From: richard santiago <justtrying2makeit@outlook.com>
+To: "mr.encodedguy@gmail.com" <mr.encodedguy@gmail.com>
+Subject: Linux+
+Thread-Topic: Linux+
+Thread-Index: AQHYi4BSWKBaaBVjDkOFs9gMaQ3pgg==
+Date: Wed, 29 Jun 2022 06:22:12 +0000
+Message-ID: <BLAPR07MB7508228B2267FA9B3F84E688BBBB9@BLAPR07MB7508.namprd07.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: 
+suggested_attachment_session_id: 6308155a-ce63-1aaa-b28e-db9a8c57fef8
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [KaxzAIhul9llzAY0t/QWMUYVW/fMAyHQ]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 7c0c87ab-0a7b-48ce-1e5f-08da5997b458
+x-ms-traffictypediagnostic: DM6PR07MB4748:EE_
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info: tLwFecOgKaAbO9ENL828Cn+Br+L5QtANHcx/ICNztqkyntNZdtZpPhV24eUUo/PUSn021edp/BcBYqLZ0bai2Tkg9r4aMxKydpjaiBU45VK3yTTXQ5T4UjbWujwY2DWIjOvQXqjIoH4mX+kmLxliM/iBlgI9JTGaJkONeUJmLevAlPbeAvNh/8HgXLVkTTA9nHUW34UrE3WvAzsOu/vez5hO0p+zCS0Vmc4pDUjeMovMBmmbKpqRZKgPErCGpa0UYdodFt1rivkQsHmYWo5UcY4y2l173j+17fIMEjLbCJzitfWATg6+b/ZRe3Os7Td/FDxPdyX8OcM07GRuZD2R+9aHRDqkhwuUSAm659f0hG3SVt8E1DynKU36orksc0duU0OgyQ/drlwzpJXAesO2oJzfgU3vuwswufFz/5O9qX53ox2CAaxfNDAkssTqQr6/7R6GnStrUlDBkYRWlkR8oAvcMBFNB5r4vdyWdr4Bj8qpSID86Yzp3XryB147REg2EvnLWV6vZilI0/WTmt+ejY+ZNMj0BWU41udWNEUeggQ+LXEAYiUfI1Fj5viCi3WLEEuXeUQoDUkzSwZnTAYrBA==
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: d2ydFjEMTF1cOB7p0QGrau/8g12CgNzq3oAgACxLnD1VbDw+NQK5IKeixJbta+kkVVvssd+rIp0yyHAwT5/r9fo3GvLuOW3ROuSJ+jFKfEohusFmgfWlPT/4d97Ns6hpQLXcYp/gkzb8VLmr8mVQnt2MCfCwHi04m/O3E2SU+OcwwNr04JGOZiUmLMGG0gmK+fUmJgZvkpkst+qqYGTliYSDaB6GuZZshzMpeNlfMvd+7bNIAtWMAu/yB+zwvPMJR1FvdBFCL/ZTWxd7LZ+NvGl/tTZPeLcDqnZ11MKXf7fZguoFFYnRv5uoiuhFI/maCm3sTUD1b0sQFNS15EqeoB2g9FlWV+8DT0LO96AmcxBUNrgRogKDXGJv4Y1mBOY0a+l7fSKgVyVJKADzr8O2Pxrd0yI0q3gn7Eh8h+oBZxKDUzEpNC2TgYnkQIdT75i6+PjY6O6HAqDd5kczYIBjcrZmXLpeKhs/f5Zj7kir/bsmsCWXzknKygEdwv+EzhZQV7h+WBj9f90wR2jz+docNz/Fw1weWXbey6P9xG3xjlJvFstQ1KAKIHWnuZ6sLd0vom8Ii9ooO6E291FqlvTHSpUGof3fV92O3nl8hoOJohKKQkNBlF5url9ypVYhYz0sJwKxTvOmUX8eKgcwZYyWRESXDXVPIBXY/hhCaCvRpjc1Jg+8npPVzkgUUnQIezA8ld10NRMyS2t4vTelUQST/+RlryrcP41ixMDy4XeBVXVv6mhmtBqDqR0jQvacpav2Bdxk/u6R1w5cvTX4Q/gn38GRMZ3trBFlvnbBWWlZbZkBWMpVMiawy6x2zTMOPdXLNeBGKneyZKFCALqMlZwnGLP67UqSpR58LyYfyWxpiZdqqz0f10sibu2iFfpMGEIiVaOhSm3KAyxOrhFkYlL1C9I/7ugcWXGvribLHoyio3ge7PNBme1DyPsqSWxC46BrrOMFVGBrKR2S0udejYZfgkYRODd1D/MyQx/Q6K2sLfr/xUN1sPOa2W9xqJb627tvmluuFmVq4ZtfJg6aqCZIWvVQycGTi1KzXoVEEYsoqNSQOMP/5bxExe246NsuVnvjiwMzXKiT/c+kTAeUa3ecD2neMx3bGbSwtHw1CWw8/iAe7Hr2n4Q6gIjovdnDx9qEPKWqcXGirks2POhAref0jbVXppzBc3TasnKqf37a+40+5AI4V0JsLhqQmaAHV7/HzDgJjKtez86gYD3zPWzib6hDDmBi4UrDGN6CrbUKFPHZ+R/nPSgJb5nvKlI/v2VWCrrRJwGkR7xUjmhVyR8izDO/u12cswUFvVFc4Cm5NWg=
+Content-Type: multipart/mixed; boundary="_004_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: BLAPR07MB7508.namprd07.prod.outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 7c0c87ab-0a7b-48ce-1e5f-08da5997b458
+X-MS-Exchange-CrossTenant-originalarrivaltime: 29 Jun 2022 06:22:12.6797 (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR07MB4748
+
+--_004_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_
+Content-Type: multipart/alternative; boundary="_000_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_"
+
+--_000_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+this is what I have so far
+
+--_000_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Calibri, Helvetica, sans-serif; font-size: 12pt;=
+ color: rgb(0, 0, 0);" class=3D"elementToProof">
+this is what I have so far</div>
+</body>
+</html>
+
+--_000_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_--
+--_004_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document; name="linux testmaster4.docx"
+Content-Description: linux testmaster4.docx
+Content-Disposition: attachment; filename="linux testmaster4.docx"; size=2031948; creation-date="Wed, 29 Jun 2022 06:21:01 GMT"; modification-date="Wed, 29 Jun 2022 06:22:12 GMT"
+Content-Transfer-Encoding: base64
+
+
+--_004_BLAPR07MB7508228B2267FA9B3F84E688BBBB9BLAPR07MB7508namp_--
