@@ -1,0 +1,80 @@
+Delivered-To: decoder2812@gmail.com
+Received: by 2002:a1c:81ca:0:0:0:0:0 with SMTP id c193csp3142076wmd;
+        Sat, 19 Dec 2020 06:07:57 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxJ1JdWFfVqOisL3be76BHwsmPIXlxveCj69btdf14t6AnF6bzCQCtzqFylHd+faSpUhni2
+X-Received: by 2002:a05:651c:1282:: with SMTP id 2mr3631527ljc.383.1608386877665;
+        Sat, 19 Dec 2020 06:07:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1608386877; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ERFA12Eb72h3GahekSbe4MxDmdAu9rYyyPDSH15rRPx3O5qxYJmpYJ1KcFr+BKM9bz
+         Tq3TNs2pIN8t0BeCggO+H47wXggAzLk+l34h0NPwxV+OmxHlVsB0jULa24yeYifn+rXK
+         xXHbAfNh/MAvVpKdgp9RQ/eCvoR0Ea/GQISnp8QoPCMdsWl81vNrZzhRqEeTARcghhk/
+         k75qtFwqTNITHTP+qu1v8A3/1h0f6i0NjgLsbfc0VceJv2kiDMQEIcrQT3oDDuHOmzKO
+         NFwI1YzFkilbvn7agshraUhb0PYmEeZwQDYOlgnjKtjMifPGoxRegxI/g8pJvG/Msen9
+         ERFg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:to:from:subject:priority:date:user-agent:mime-version
+         :dkim-signature;
+        bh=04cHal2iuABmGnTc0y7efeGRwa/TILX7FZ0mZfJXlVA=;
+        b=WulZ8Xlf06J1aR7C23oR8Yj5OAFZrmkfpXZZSCVkEf806ch9k+Sn8zhUTXdxosX0sZ
+         9ri2ucUbtVKNJgMZUofWwYvNBS+63adADdBNUlCoPQIbRZxKK+jNjZVhhGE6EHzlmt+w
+         hulKRxxO6tJpfEx9Rel0YXgWwIpVj/wtbEiGHeppYHgJGKSZRiNY4vLkPw68zzvoX9tN
+         qbsUKCClopiMFDLo71fcGsV8V0CQ/aUdp+JUvgccCdxWpw7TqfGMlST5IHwBax4fEQiq
+         5nwuhBbafRiA2SI+99m0gVbr4y4zA30g+ngoVC7kQcIzAXAfyj2grJWkiC4lRfyNj5fJ
+         8dNA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass (test mode) header.i=@wp.pl header.s=1024a header.b="PejxnH/U";
+       spf=pass (google.com: domain of drzyzgaozdowskiojsd11@wp.pl designates 212.77.101.9 as permitted sender) smtp.mailfrom=drzyzgaozdowskiojsd11@wp.pl;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=wp.pl
+Return-Path: <drzyzgaozdowskiojsd11@wp.pl>
+Received: from mx3.wp.pl (mx3.wp.pl. [212.77.101.9])
+        by mx.google.com with ESMTPS id b13si4763269lfb.287.2020.12.19.06.07.57
+        for <decoder2812@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 19 Dec 2020 06:07:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of drzyzgaozdowskiojsd11@wp.pl designates 212.77.101.9 as permitted sender) client-ip=212.77.101.9;
+Authentication-Results: mx.google.com;
+       dkim=pass (test mode) header.i=@wp.pl header.s=1024a header.b="PejxnH/U";
+       spf=pass (google.com: domain of drzyzgaozdowskiojsd11@wp.pl designates 212.77.101.9 as permitted sender) smtp.mailfrom=drzyzgaozdowskiojsd11@wp.pl;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=wp.pl
+Received: (wp-smtpd smtp.wp.pl 3241 invoked from network); 19 Dec 2020 15:07:56 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=wp.pl; s=1024a;
+          t=1608386876; bh=04cHal2iuABmGnTc0y7efeGRwa/TILX7FZ0mZfJXlVA=;
+          h=Subject:From:To;
+          b=PejxnH/UNtx/mr5qt7P3ryzEChUv52wQ8r6tGu+ECFsNspuUKEA25X1qObZqxliGt
+           pPSGgyztRFoD1igjRpLpIOWklTLAKTp4+XJXA48wlTS6YBEVxgG+8ilaM6bWCVoba7
+           YQOtf7RBHdPbQfN8PT69qCHq9zSh+iO18dmG3drE=
+Received: from localhost.localdomain (HELO localhost) ([31.178.253.108])
+          (envelope-sender <drzyzgaozdowskiojsd11@wp.pl>)
+          by smtp.wp.pl (WP-SMTPD) with SMTP
+          for <decoder2812@gmail.com>; 19 Dec 2020 15:07:56 +0100
+Content-Type: multipart/alternative; boundary="2FLNTPRFHIHRDBKGRGBDInhgwp"
+MIME-Version: 1.0
+User-Agent: GWP-Draft
+X-Originator: 31.178.253.108
+X-FactoryStamp: H---
+Date: Sat, 19 Dec 2020 15:07:56 +0100
+X-Draft-Variant: new
+X-Draft-Contenttype: text/html
+Priority: normal
+Subject: RE: Coding
+From: Julie <drzyzgaozdowskiojsd11@wp.pl>
+To: "decoder2812@gmail.com" <decoder2812@gmail.com>
+Message-ID: <fe3425f46b794cb999c507b7582b9e43@grupawp.pl>
+X-WP-MailID: d08f2d2d8fa2883b1aa61af667810a58
+X-WP-AV: skaner antywirusowy Poczty Wirtualnej Polski
+X-WP-SPAM: YES 0100010 [cZPk]
+
+--2FLNTPRFHIHRDBKGRGBDInhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Coding how are you now?
+
+
+--2FLNTPRFHIHRDBKGRGBDInhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<div>Coding how are you now?<br></div>
+--2FLNTPRFHIHRDBKGRGBDInhgwp--
